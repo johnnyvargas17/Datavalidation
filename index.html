@@ -4,7 +4,6 @@
     <script src="datavalidation.js"></script>
     <body>
     <div style="background: url(hacker.jpg)" class="page-holder bg-cover">
-
         <div class="container py-5">
           <header class="text-center text-white py-5">
             Data validation tool that helps deflect hackers!
@@ -15,52 +14,45 @@
             }
             </style>
           <div class="text-white">
-                
-                <input type="tel" id="myInput" oninput="myFunction()" placeholder="(###) ### - ####" required pattern="\([0-9]{3}\) [0-9]{3} - [0-9]{4}">
-                <!-- oninput is trigued when the input changes, check https://www.w3schools.com/jsref/event_oninput.asp -->
-                <!-- Used regex to check the input value before submit from user -->
-                <input type="submit">
-              </form>
+                </form>
                 <label for="phonenumber">Phone number</label>
                 <form>
-                    <input type="tel" id="myInput" oninput="Phonenumber()" placeholder="(###) ### - ####" required pattern="\([0-9]{3}\) [0-9]{3} - [0-9]{4}">
-                    <!-- oninput is trigued when the input changes, check https://www.w3schools.com/jsref/event_oninput.asp -->
-                    <!-- Used regex to check the input value before submit from user -->
-                    <input type="submit">
+                    <input type="tel" id="myInput" placeholder="(###) ### - ####">
                   </form>
-                <input type="text" id="PhoneNumbers" name="Phonenumbers" size="50"><br><br>
                 <div class="text-center">
-                    <button onclick()="Phonenumber()" class="Phonenumberclass">Submit</button>
+                    <button onmousedown="Phonenumberoutput()" class="Phonenumberclass">Submit</button>
                   </div>
-                <p id="Phonenumbererrormessage"></p>
+                <p id="Phonenumbermessage"></p>
                 <label for="Age">Age (Between 16 to 100 please)</label>
                 <input type="text" id="Age" name="Age" size="50"><br><br>
                 <p id="AgeErrorMessage">
                 <div class="text-center2">
                     <button onmousedown="Age()" class="Ageclass">Submit</button>
                   </div>
-                <label for="CCnumber">Credit Card Number: </label>
-                <input type="text" name="cstCCNumber" id="cstCCNumber" size="50" gvalue=""onkeyup="cc_format('cstCCNumber','cstCCardType');">
-                <div class="text-center3">
-                    <button onclick="CreditCardNumber()" class="CCNumberbutton">Submit</button>
+                <label for="CCnumber">Please enter valid Credit Card Number: </label>  
+                <input type="text" id="CCnumbers" name="CCnumber" size="50">          
+                <select tabindex="11" id="CardType" style="margin-left: 10px;">
+                    <option value="Discover">Discover</option>
+                    <option value="MasterCard">MasterCard</option>
+                    <option value="Visa">Visa</option>
+                  </select> 
+                  <div class="text-center3">
+                    <button onmousedown="validateCardNumber()" class="CCNumberbutton">Submit</button>
                 </div>
+                
                 <p id="CreditCardNumberMessage"></p>  
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name" size="50"><br><br>
-                <div class="text-center4">
-                    <button onclick()="Names()" class="Nameclass">Submit</button>
-                </div>
-                <p id="NameErrorMessage"></p>
                 <label for="state">State</label>
-			<select id="state" name="state"><option value="---">---</option><option value="Alabama">Alabama</option><option value="Alaska">Alaska</option><option value="Arizona">Arizona</option><option value="Arkansas">Arkansas</option><option value="California">California</option><option value="Colorado">Colorado</option><option value="Connecticut">Connecticut</option><option value="Delaware">Delaware</option><option value="District of Columbia">District of Columbia</option><option value="Florida">Florida</option><option value="Georgia">Georgia</option><option value="Guam">Guam</option><option value="Hawaii">Hawaii</option><option value="Idaho">Idaho</option><option value="Illinois">Illinois</option><option value="Indiana">Indiana</option><option value="Iowa">Iowa</option><option value="Kansas">Kansas</option><option value="Kentucky">Kentucky</option><option value="Louisiana">Louisiana</option><option value="Maine">Maine</option><option value="Maryland">Maryland</option><option value="Massachusetts">Massachusetts</option><option value="Michigan">Michigan</option><option value="Minnesota">Minnesota</option><option value="Mississippi">Mississippi</option><option value="Missouri">Missouri</option><option value="Montana">Montana</option><option value="Nebraska">Nebraska</option><option value="Nevada">Nevada</option><option value="New Hampshire">New Hampshire</option><option value="New Jersey">New Jersey</option><option value="New Mexico">New Mexico</option><option value="New York">New York</option><option value="North Carolina">North Carolina</option><option value="North Dakota">North Dakota</option><option value="Northern Marianas Islands">Northern Marianas Islands</option><option value="Ohio">Ohio</option><option value="Oklahoma">Oklahoma</option><option value="Oregon">Oregon</option><option value="Pennsylvania">Pennsylvania</option><option value="Puerto Rico">Puerto Rico</option><option value="Rhode Island">Rhode Island</option><option value="South Carolina">South Carolina</option><option value="South Dakota">South Dakota</option><option value="Tennessee">Tennessee</option><option value="Texas">Texas</option><option value="Utah">Utah</option><option value="Vermont">Vermont</option><option value="Virginia">Virginia</option><option value="Virgin Islands">Virgin Islands</option><option value="Washington">Washington</option><option value="West Virginia">West Virginia</option><option value="Wisconsin">Wisconsin</option><option value="Wyoming">Wyoming</option></select>
-   </fieldset>
-</form>
+			    <select id="state" name="state"><option value="---">---</option><option value="Alabama">Alabama</option><option value="Alaska">Alaska</option><option value="Arizona">Arizona</option><option value="Arkansas">Arkansas</option><option value="California">California</option><option value="Colorado">Colorado</option><option value="Connecticut">Connecticut</option><option value="Delaware">Delaware</option><option value="District of Columbia">District of Columbia</option><option value="Florida">Florida</option><option value="Georgia">Georgia</option><option value="Guam">Guam</option><option value="Hawaii">Hawaii</option><option value="Idaho">Idaho</option><option value="Illinois">Illinois</option><option value="Indiana">Indiana</option><option value="Iowa">Iowa</option><option value="Kansas">Kansas</option><option value="Kentucky">Kentucky</option><option value="Louisiana">Louisiana</option><option value="Maine">Maine</option><option value="Maryland">Maryland</option><option value="Massachusetts">Massachusetts</option><option value="Michigan">Michigan</option><option value="Minnesota">Minnesota</option><option value="Mississippi">Mississippi</option><option value="Missouri">Missouri</option><option value="Montana">Montana</option><option value="Nebraska">Nebraska</option><option value="Nevada">Nevada</option><option value="New Hampshire">New Hampshire</option><option value="New Jersey">New Jersey</option><option value="New Mexico">New Mexico</option><option value="New York">New York</option><option value="North Carolina">North Carolina</option><option value="North Dakota">North Dakota</option><option value="Northern Marianas Islands">Northern Marianas Islands</option><option value="Ohio">Ohio</option><option value="Oklahoma">Oklahoma</option><option value="Oregon">Oregon</option><option value="Pennsylvania">Pennsylvania</option><option value="Puerto Rico">Puerto Rico</option><option value="Rhode Island">Rhode Island</option><option value="South Carolina">South Carolina</option><option value="South Dakota">South Dakota</option><option value="Tennessee">Tennessee</option><option value="Texas">Texas</option><option value="Utah">Utah</option><option value="Vermont">Vermont</option><option value="Virginia">Virginia</option><option value="Virgin Islands">Virgin Islands</option><option value="Washington">Washington</option><option value="West Virginia">West Virginia</option><option value="Wisconsin">Wisconsin</option><option value="Wyoming">Wyoming</option></select>
+                </fieldset>
+                </form>
                 <div class="text-center3">
-                    <button button onclick()="State()" class="State">Submit</button>
-                  </div>
-              </form>
+                    <button onmousedown="State()" class="State">Submit</button>
+
+                </div>   
+                <p id="Statemessage"</p>   
+           
+                
           </div>
-      
         </div>
       </div
     </body>

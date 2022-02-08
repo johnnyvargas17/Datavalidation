@@ -23,10 +23,11 @@ header{
 
 
 .Phonenumberclass{
+    font-family: "Times New Roman", Times, serif;
     background-color: #0c0fb3;
     border: none;
     color: white;
-    padding: 15px 32px;
+    padding: 15px 20px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -38,10 +39,11 @@ header{
 
 
 .AgeClass{
+    font-family: "Times New Roman", Times, serif;
     background-color: #0c0fb3;
     border: none;
     color: white;
-    padding: 15px 32px;
+    padding: 15px 20px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -54,10 +56,11 @@ header{
 
 .NameClass{
 
+    font-family: "Times New Roman", Times, serif;
     background-color: #0c0fb3;
     border: none;
     color: white;
-    padding: 15px 32px;
+    padding: 15px 20px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -67,10 +70,11 @@ header{
 }
 
 .State{
+    font-family: "Times New Roman", Times, serif;
     background-color: #0c0fb3;
     border: none;
     color: white;
-    padding: 15px 32px;
+    padding: 15px 20px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -82,10 +86,11 @@ header{
 
 
 .CCNumberbutton{
+    font-family: "Times New Roman", Times, serif;
     background-color: #0c0fb3;
     border: none;
     color: white;
-    padding: 15px 32px;
+    padding: 15px 20px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
